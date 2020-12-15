@@ -8,6 +8,7 @@ from sklearn.decomposition import IncrementalPCA
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
+
 if __name__ == "__main__":
   # Cargamos los datos del dataframe de pandas
   dt_heart = pd.read_csv('data/heart.csv')
