@@ -24,3 +24,21 @@ if __name__ == "__main__":
 
     # Aplicamos nuestro módulo de ajuste
     X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.35)
+
+    # Utilizamos un clasificador por KNN y lo ajustamos 
+    knn_class = KNeighborsClassifier().fit(X_train, y_train)
+    # Hacemos las predicciones 
+    knn_pred = knn_class.predict(X_test)
+    # Imprimimos el resultado de nuestra clasificación 
+    print("="*64)
+    print("KNeighborsClassifier: ", accuracy_score(knn_pred, y_test))
+    
+    # Agregamos nuestro clasificador por ensamble, le podemos 50 modelos para que lo use  y lo ajustamos 
+    bag_class = BaggingClassifier(base_estimator=KNeighborsClassifier(), n_estimators=50).fit(X_train, y_train) 
+    # Ajustamos las predicciones 
+    bag_pred = bag_class.predict(X_test) 
+    # Imprimimos el resultado 
+    print("="*64)
+    print("BaggingClassifier: ", accuracy_score(bag_pred, y_test))   
+
+    
