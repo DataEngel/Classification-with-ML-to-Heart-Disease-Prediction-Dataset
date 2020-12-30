@@ -40,4 +40,5 @@ if __name__ == "__main__":
  
  #Imprimimos los resultados
  print("SCORE KPCA: ", logistic.score(dt_test, y_test))
+ 
 

@@ -15,7 +15,7 @@ if __name__ == "__main__":
     # Importamos el dataset 
     dt_heart = pd.read_csv('./data/heart.csv')
     # Imprimimos la descripción 
-    print(dt_heart['target'].describe())
+    #print(dt_heart['target'].describe())
 
     # Cargamos nuestro dataset excepto la variable target 
     X = dt_heart.drop(['target'], axis=1)
@@ -39,6 +39,6 @@ if __name__ == "__main__":
     bag_pred = bag_class.predict(X_test) 
     # Imprimimos el resultado 
     print("="*64)
-    print("BaggingClassifier: ", accuracy_score(bag_pred, y_test))   
+    print("BaggingClassifier: ", accuracy_score(bag_pred, y_test))    
 
     

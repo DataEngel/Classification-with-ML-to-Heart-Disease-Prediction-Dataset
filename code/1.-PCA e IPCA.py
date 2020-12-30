@@ -58,4 +58,4 @@ if __name__ == "__main__":
   # Mandamos los data frames la la regresión logística
   logistic.fit(dt_train, y_train)
   #Calculamos nuestra exactitud de nuestra predicción
-  print("SCORE IPCA: ", logistic.score(dt_test, y_test)) 
+  print("SCORE IPCA: ", logistic.score(dt_test, y_test))  
