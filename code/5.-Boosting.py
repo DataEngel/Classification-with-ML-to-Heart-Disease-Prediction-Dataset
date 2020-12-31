@@ -49,4 +49,4 @@ if __name__ == "__main__":
     plt.show()
     plt.savefig('Boost.png')
 
-    print(np.array(total_accuracy).max()) 
+    #print(np.array(total_accuracy).max()) 

@@ -1,4 +1,4 @@
-# Proyecto: Clasificaciones 
+# Proyecto: Algoritmos y métodos para clasificación
  
 Heart disease prediction: Es un subconjunto de variables de un estudio que realizado en 1988 en diferentes regiones del planeta para predecir el riesgo a sufrir una enfermedad relacionada con el corazón. 
  
@@ -57,10 +57,39 @@ Ahora vamos a medir el rendimiento de nuestro modelo basado en kernel:
  
 ![10](https://user-images.githubusercontent.com/63415652/103372281-32ef6900-4a97-11eb-8c9b-d4fb4f3abf94.PNG)
  
-> **Conclusión:_** Implementar un kernel es relativamente fácil y tiene una buena precisión, el problema más grande con el que nos enfrentaremos es identificar cuándo necesitaremos para modelar un espacio dimensional superior. 
+> **_Conclusión:_** Implementar un kernel es relativamente fácil y tiene una buena precisión, el problema más grande con el que nos enfrentaremos es identificar cuándo necesitaremos para modelar un espacio dimensional superior. 
  
-
-
+## Métodos de ensamble
+ 
+### Bagging:
+ 
+¿Qué tal si en lugar de depender de la opinión de un solo "experto" consultamos la opinión de varios expertos en paralelo e intentamos lograr un consenso? 
+ 
+Para ello nos tenemos que imaginar que nuestro modelo de ML es un experto, pero, ¿si pudiéramos tener la opinión de varios expertos? Pues sería mucho mejor, ¿verdad? Entonces, en este algoritmo se toma en consideración varios votos de expertos y para ello se puede hacer un conteo o simplemente un promedio.
+ 
+### Boosting. 
+ 
+* Significa impulsar / propulsar. 
+* Es un método secuencial. 
+* Busca fortalecer gradualmente un modelo de aprendizaje usando siempre el error residual de las etapas anteriores.
+ 
+* El resultado final también se consigue por consenso entre todos los modelos. 
+ 
+Ahora, vamos a ver los resultados implementando los métodos en código. 
+ 
+Aquí podemos ver la percepción que tuvieron todos los métodos de ensamble en relación a el KNN sin método de ensamble: 
+ 
+![12](https://user-images.githubusercontent.com/63415652/103423141-a910d000-4b6a-11eb-8255-38255ac7a2bc.PNG)
+ 
+Y por último la precisión de boosting: 
+ 
+![13](https://user-images.githubusercontent.com/63415652/103423142-aa41fd00-4b6a-11eb-8f84-c6e2682d0bad.PNG)
+ 
+Como podemos ver, el método de Boosting nos dió una exactitud muy significativa. 
+ 
+Con los métodos de ensamble, aún cuando cuando teníamos un clasificador que no era tan bueno, podemos llegar a muchos mejores resultados utilizando los métodos de ensamble. Además, un clasificador por sí solo no siempre es tan poderoso como aplicar muchas veces ese clasificador con diferentes parámetros y diferentes configuraciones con un método de consenso aplicado.
+ 
+>**_Conclusión:_** En un ejercicio de la vida real estamos clasificando un paciente y tenemos un porcentaje súper alto de exactitud a la hora de predecir un paciente entonces esto es un excelente soporte para un médico en una clínica en su trabajo cotidiano. 
 
 
 
