@@ -1,21 +1,21 @@
 # Proyecto: Algoritmos y métodos para clasificación
  
-Heart disease prediction: Es un subconjunto de variables de un estudio que realizado en 1988 en diferentes regiones del planeta para predecir el riesgo a sufrir una enfermedad relacionada con el corazón. 
+**¿De qué trata el dataset de Heart disease prediction?** Es un subconjunto de variables de un estudio que realizado en 1988 en diferentes regiones del planeta para predecir el riesgo a sufrir una enfermedad relacionada con el corazón. 
  
 > **_Nota:_** En este readme sólo se mostrarán los resultados, para más detalles ver el código el la carpeta code de este repo. 
  
-## Proyecto 1: Análisis de componentes principales 
+## Análisis de componentes principales 
  
 **¿Por qué usamos este algoritmo?**
  
 - Porque en machine learning es normal encontrarnos con problemas donde tengamos una enorme cantidad de features en donde hay relaciones complejas entre ellos y con la variable que queremos predecir.
  
-Pistas donde se puede utilizar un algoritmo PCA:
+**¿Dónde se puede utilizar un algoritmo PCA?**
  
-- Nuestro dataset tiene un número alto de features y no todos son significativos.
-- Hay una alta correlación entre los features.
-- Cuando hay overfitting.
-- Cuando implica un alto coste computacional.
+* Nuestro dataset tiene un número alto de features y no todos son significativos.
+* Hay una alta correlación entre los features.
+* Cuando hay overfitting.
+* Cuando implica un alto coste computacional.
  
 ---
  
@@ -29,7 +29,7 @@ Básicamente consiste en reducir la complejidad del problema:
  
 ![6](https://user-images.githubusercontent.com/63415652/103370614-dc802b80-4a92-11eb-94f3-8603c15c4953.PNG)
  
-Ahora aplicándolo a nuestro dataset logramos esta precisión: 
+Bueno, ahora que ya tenemos contexto de nuestro dataset vamos a ver cuál fue el resultado/precisión aplicando una regresión logística ya con la reducción de la complejidad aplicada: 
  
 ![8](https://user-images.githubusercontent.com/63415652/103371135-4f3dd680-4a94-11eb-9f04-e409c3c9587b.PNG)
  
