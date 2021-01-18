@@ -37,7 +37,7 @@ Bueno de entrada vemos que los 2 algoritmos tienen casi el mismo rendimiento, pe
  
 El dataset original tenía 13 features para intentar predecir una clasificación binaria sobre si tiene el paciente una enfermedad cardiaca o no la tiene, y ahora con PCA solo necesitamos 3 features artificiales para llegar a un resultado suficientemente bueno. 
  
- > **_Entonces en conclusión,_** nos estamos ahorrando coste computacional, ya que solo estamos utilizando la información relevante para nuestro modelo. 
+ > **_Conclusión:_** nos estamos ahorrando coste computacional, ya que solo estamos utilizando la información relevante para nuestro modelo. 
  
 ## Proyecto 2: Kernels y KPCA
  
@@ -53,7 +53,7 @@ Bueno, una alternativa son los Kernels. Un Kernel es una función matemática qu
  
 Sirve para casos en donde no son linealmente separables. En la primera imagen no es posible separarlos con una línea y en la imagen 2 si lo podemos hacer mediante Kernels. Lo que hace la función de Kernels es proyectar los puntos en otra dimensión y así volver los datos linealmente separables.
  
-Ahora vamos a medir el rendimiento de nuestro modelo basado en kernel:
+Ahora vamos a implementar kernels a nuestro dataset y mediremos con que precesión acertó a la hora de clasificar:
  
 ![10](https://user-images.githubusercontent.com/63415652/103372281-32ef6900-4a97-11eb-8c9b-d4fb4f3abf94.PNG)
  
@@ -72,12 +72,11 @@ Para ello nos tenemos que imaginar que nuestro modelo de ML es un experto, pero,
 * Significa impulsar / propulsar. 
 * Es un método secuencial. 
 * Busca fortalecer gradualmente un modelo de aprendizaje usando siempre el error residual de las etapas anteriores.
- 
 * El resultado final también se consigue por consenso entre todos los modelos. 
  
 Ahora, vamos a ver los resultados implementando los métodos en código. 
  
-Aquí podemos ver la percepción que tuvieron todos los métodos de ensamble en relación a el KNN sin método de ensamble: 
+Aquí podemos ver la precesión que tuvieron todos los métodos de ensamble en relación a el KNN sin método de ensamble: 
  
 ![12](https://user-images.githubusercontent.com/63415652/103423141-a910d000-4b6a-11eb-8255-38255ac7a2bc.PNG)
  
@@ -89,11 +88,4 @@ Como podemos ver, el método de Boosting nos dió una exactitud muy significativ
  
 Con los métodos de ensamble, aún cuando cuando teníamos un clasificador que no era tan bueno, podemos llegar a muchos mejores resultados utilizando los métodos de ensamble. Además, un clasificador por sí solo no siempre es tan poderoso como aplicar muchas veces ese clasificador con diferentes parámetros y diferentes configuraciones con un método de consenso aplicado.
  
->**_Conclusión:_** En un ejercicio de la vida real estamos clasificando un paciente y tenemos un porcentaje súper alto de exactitud a la hora de predecir un paciente entonces esto es un excelente soporte para un médico en una clínica en su trabajo cotidiano. 
-
-
-
-
-
-
- 
+>**_Conclusión:_** En un ejercicio de la vida real estamos clasificando un paciente y tenemos un porcentaje súper alto de exactitud a la hora de predecir un paciente, entonces esto es un excelente soporte para un médico en una clínica en su trabajo cotidiano. 
