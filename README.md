@@ -1,91 +1,91 @@
-# Proyecto: Algoritmos y métodos para clasificación
+# Project: Algorithms and methods for classification
  
-**¿De qué trata el dataset de Heart disease prediction?** Es un subconjunto de variables de un estudio que realizado en 1988 en diferentes regiones del planeta para predecir el riesgo a sufrir una enfermedad relacionada con el corazón. 
+**What is the Heart disease prediction dataset about?** It is a subset of variables from a study carried out in 1988 in different regions of the world to predict the risk of suffering a heart-related disease.
  
-> **_Nota:_** En este readme sólo se mostrarán los resultados, para más detalles ver el código el la carpeta code de este repo. 
+>**_Note:_** In this readme only the results will be shown, for more details see the code in the code folder of this repo.
  
-## Análisis de componentes principales 
+## Principal component analysis
  
-**¿Por qué usamos este algoritmo?**
+**Why do we use this algorithm?**
  
-- Porque en machine learning es normal encontrarnos con problemas donde tengamos una enorme cantidad de features en donde hay relaciones complejas entre ellos y con la variable que queremos predecir.
+ Because in machine learning it is normal to find problems where we have a huge amount of features where there are complex relationships between them and with the variable we want to predict.
  
-**¿Dónde se puede utilizar un algoritmo PCA?**
+**Where can a PCA algorithm be used?**
  
-* Nuestro dataset tiene un número alto de features y no todos son significativos.
-* Hay una alta correlación entre los features.
-* Cuando hay overfitting.
-* Cuando implica un alto coste computacional.
+* Our dataset has a high number of features and not all of them are significant.
+* There is a high correlation between the features.
+* When there is overfitting.
+* When it involves a high computational cost.
  
 ---
  
-**¿En qué consiste el algoritmo PCA?**
+** What is the PCA algorithm? **
  
-Básicamente consiste en reducir la complejidad del problema:
+It basically consists of reducing the complexity of the problem:
  
-**1.-** Seleccionando solamente las variables relevantes.
+**1.-** Selecting only the relevant variables.
  
-**2.-** Combinandolas en nuevas variables que mantengan la información más importante (varianza de los features).
+**2.-** Combining them in new variables that keep the most important information (variance of the features).
  
 ![6](https://user-images.githubusercontent.com/63415652/103370614-dc802b80-4a92-11eb-94f3-8603c15c4953.PNG)
  
-Bueno, ahora que ya tenemos contexto de nuestro dataset vamos a ver cuál fue el resultado/precisión aplicando una regresión logística ya con la reducción de la complejidad aplicada: 
+Well, now that we have the context of our dataset, let's see what the result / precision was applying a logistic regression with the complexity reduction applied:
  
 ![8](https://user-images.githubusercontent.com/63415652/103371135-4f3dd680-4a94-11eb-9f04-e409c3c9587b.PNG)
  
-Bueno de entrada vemos que los 2 algoritmos tienen casi el mismo rendimiento, pero, ¿qué logramos con esto? 
+Well from the outset we see that the 2 algorithms have almost the same performance, but what do we achieve with this?
  
-El dataset original tenía 13 features para intentar predecir una clasificación binaria sobre si tiene el paciente una enfermedad cardiaca o no la tiene, y ahora con PCA solo necesitamos 3 features artificiales para llegar a un resultado suficientemente bueno. 
+The original dataset had 13 features to try to predict a binary classification of whether the patient has heart disease or not, and now with PCA we only need 3 artificial features to arrive at a good enough result.
  
- > **_Conclusión:_** nos estamos ahorrando coste computacional, ya que solo estamos utilizando la información relevante para nuestro modelo. 
+ >**_Conclusion:_** we are saving computational cost, since we are only using the relevant information for our model.
  
-## Proyecto 2: Kernels y KPCA
+## Project 2: Kernels and KPCA
  
-**Ahora que ya sabemos el algoritmo de PCA, ¿qué otras alternativas tenemos?**
+**Now that we know the PCA algorithm, what other alternatives do we have?**
  
 ---
  
-Bueno, una alternativa son los Kernels. Un Kernel es una función matemática que toma mediciones que se comportan de manera no lineal y las proyecta en un espacio dimensional más grande en donde son linealmente separables.
+Well, an alternative is the kernels. A kernel is a mathematical function that takes measurements that behave non-linearly and projects them into a larger dimensional space where they are linearly separable.
  
-**Y, ¿esto para qué puede servir?**
+**And what is this for?**
  
 ![9](https://user-images.githubusercontent.com/63415652/103372032-93ca7180-4a96-11eb-8c4b-28ae4ffc6020.PNG)
  
-Sirve para casos en donde no son linealmente separables. En la primera imagen no es posible separarlos con una línea y en la imagen 2 si lo podemos hacer mediante Kernels. Lo que hace la función de Kernels es proyectar los puntos en otra dimensión y así volver los datos linealmente separables.
+It serves for cases where they are not linearly separable. In the first image it is not possible to separate them with a line and in image 2 if we can do it through Kernels. What the Kernels function does is project the points into another dimension and thus make the data linearly separable.
  
-Ahora vamos a implementar kernels a nuestro dataset y mediremos con que precesión acertó a la hora de clasificar:
+Now we are going to implement kernels to our dataset and measure with which precession it was correct when classifying:
  
 ![10](https://user-images.githubusercontent.com/63415652/103372281-32ef6900-4a97-11eb-8c9b-d4fb4f3abf94.PNG)
  
-> **_Conclusión:_** Implementar un kernel es relativamente fácil y tiene una buena precisión, el problema más grande con el que nos enfrentaremos es identificar cuándo necesitaremos para modelar un espacio dimensional superior. 
+> **_Conclusion:_** Implementing a kernel is relatively easy and has good precision, the biggest problem we will face is identifying when we will need to model a higher dimensional space.
  
-## Métodos de ensamble
+## Assembly methods
  
 ### Bagging:
  
-¿Qué tal si en lugar de depender de la opinión de un solo "experto" consultamos la opinión de varios expertos en paralelo e intentamos lograr un consenso? 
+What if instead of relying on the opinion of a single "expert" we consult the opinion of several experts in parallel and try to reach a consensus?
  
-Para ello nos tenemos que imaginar que nuestro modelo de ML es un experto, pero, ¿si pudiéramos tener la opinión de varios expertos? Pues sería mucho mejor, ¿verdad? Entonces, en este algoritmo se toma en consideración varios votos de expertos y para ello se puede hacer un conteo o simplemente un promedio.
+For this we have to imagine that our ML model is an expert, but what if we could have the opinion of several experts? Well, it would be much better, right? So, in this algorithm, several expert votes are taken into consideration and for this a count can be made or simply an average.
  
-### Boosting. 
+### Boosting.
  
-* Significa impulsar / propulsar. 
-* Es un método secuencial. 
-* Busca fortalecer gradualmente un modelo de aprendizaje usando siempre el error residual de las etapas anteriores.
-* El resultado final también se consigue por consenso entre todos los modelos. 
+* It means to propel / propel.
+* It is a sequential method.
+* Seeks to gradually strengthen a learning model always using the residual error of the previous stages.
+* The final result is also achieved by consensus among all models.
  
-Ahora, vamos a ver los resultados implementando los métodos en código. 
+Now, we are going to see the results implementing the methods in code.
  
-Aquí podemos ver la precesión que tuvieron todos los métodos de ensamble en relación a el KNN sin método de ensamble: 
+Here we can see the precession that all assembly methods had in relation to the KNN without assembly method:
  
 ![12](https://user-images.githubusercontent.com/63415652/103423141-a910d000-4b6a-11eb-8255-38255ac7a2bc.PNG)
  
-Y por último la precisión de boosting: 
+And finally the boosting precision:
  
 ![13](https://user-images.githubusercontent.com/63415652/103423142-aa41fd00-4b6a-11eb-8f84-c6e2682d0bad.PNG)
  
-Como podemos ver, el método de Boosting nos dió una exactitud muy significativa. 
+As we can see, the Boosting method gave us very significant accuracy.
  
-Con los métodos de ensamble, aún cuando cuando teníamos un clasificador que no era tan bueno, podemos llegar a muchos mejores resultados utilizando los métodos de ensamble. Además, un clasificador por sí solo no siempre es tan poderoso como aplicar muchas veces ese clasificador con diferentes parámetros y diferentes configuraciones con un método de consenso aplicado.
+With the assembly methods, even though we had a classifier that was not that good, we can achieve much better results using the assembly methods. Also, a classifier alone is not always as powerful as applying that classifier many times with different parameters and different settings with a consensus method applied.
  
->**_Conclusión:_** En un ejercicio de la vida real estamos clasificando un paciente y tenemos un porcentaje súper alto de exactitud a la hora de predecir un paciente, entonces esto es un excelente soporte para un médico en una clínica en su trabajo cotidiano. 
+>**_Conclusion:_** In a real life exercise we are classifying a patient and we have a super high percentage of accuracy when predicting a patient, so this is excellent support for a doctor in a clinic at work daily.
