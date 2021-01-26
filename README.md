@@ -19,7 +19,7 @@
  
 ---
  
-** What is the PCA algorithm? **
+**What is the PCA algorithm?**
  
 It basically consists of reducing the complexity of the problem:
  
