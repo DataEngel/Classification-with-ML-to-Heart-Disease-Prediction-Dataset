@@ -26,8 +26,8 @@ It basically consists of reducing the complexity of the problem:
 **1.-** Selecting only the relevant variables.
  
 **2.-** Combining them in new variables that keep the most important information (variance of the features).
- 
-![6](https://user-images.githubusercontent.com/63415652/103370614-dc802b80-4a92-11eb-94f3-8603c15c4953.PNG)
+
+![1](https://user-images.githubusercontent.com/63415652/105783945-5645f080-5f3d-11eb-97f5-b0ab1ab96f3b.PNG)
  
 Well, now that we have the context of our dataset, let's see what the result / precision was applying a logistic regression with the complexity reduction applied:
  
@@ -49,7 +49,7 @@ Well, an alternative is the kernels. A kernel is a mathematical function that ta
  
 **And what is this for?**
  
-![9](https://user-images.githubusercontent.com/63415652/103372032-93ca7180-4a96-11eb-8c4b-28ae4ffc6020.PNG)
+![2](https://user-images.githubusercontent.com/63415652/105783948-580fb400-5f3d-11eb-982e-949bfb6c8f1c.PNG)
  
 It serves for cases where they are not linearly separable. In the first image it is not possible to separate them with a line and in image 2 if we can do it through Kernels. What the Kernels function does is project the points into another dimension and thus make the data linearly separable.
  
