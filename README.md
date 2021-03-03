@@ -89,3 +89,14 @@ As we can see, the Boosting method gave us very significant accuracy.
 With the assembly methods, even though we had a classifier that was not that good, we can achieve much better results using the assembly methods. Also, a classifier alone is not always as powerful as applying that classifier many times with different parameters and different settings with a consensus method applied.
  
 >**_Conclusion:_** In a real life exercise we are classifying a patient and we have a super high percentage of accuracy when predicting a patient, so this is excellent support for a doctor in a clinic at work daily.
+
+---
+
+## Data source: [Heart Disease UCI](https://www.kaggle.com/ronitf/heart-disease-uci "Heart Disease UCI")
+
+Although the code is proprietary and free to use, the data is licensed, please read it before using this data.
+This project is not for commercial purposes, it is for academic purposes only.
+
+## You can check the main notebook in my kaggle profile and if you like, my other contributions too:
+
+* [Classification in Heart Disease Prediction DataSet](https://www.kaggle.com/dataengel/classification-in-heart-disease-prediction-dataset "Classification in Heart Disease Prediction DataSet") 
