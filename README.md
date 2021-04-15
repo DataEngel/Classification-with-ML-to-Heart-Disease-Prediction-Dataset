@@ -94,7 +94,7 @@ With the assembly methods, even though we had a classifier that was not that goo
 
 ## Data source: [Heart Disease UCI](https://www.kaggle.com/ronitf/heart-disease-uci "Heart Disease UCI")
 
-Although the code is proprietary and free to use, the data is licensed, please read it before using this data.
+Although the code is not proprietary and is free to use, the data is licensed, please read it before using this data.
 This project is not for commercial purposes, it is for academic purposes only.
 
 ## You can check the main notebook in my kaggle profile and if you like, my other contributions too:
